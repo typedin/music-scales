@@ -1,0 +1,5 @@
+{
+  "README.md": { "type": "readme" },
+  "src/*.ts": { "alternate": "tests/{}.test.ts", "type": "source" },
+  "tests/*.test.ts": { "alternate": "src/{}.ts", "type": "test" }
+}
