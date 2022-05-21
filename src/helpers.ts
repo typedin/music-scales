@@ -1,4 +1,4 @@
-import { Alteration, Note, ScaleDegree } from "./types";
+import { Alteration, AlterationEnum, Note, ScaleDegree } from "./types";
 import { diatonicNoteNames } from "./MusicalConstants";
 
 import { alterations } from "./MusicalConstants";
@@ -8,14 +8,14 @@ export function index(note: Note, offset = 0): number {
 }
 
 const allAlterations = [
-  alterations.doubleFlat,
-  alterations.flat,
-  alterations.natural,
-  alterations.sharp,
-  alterations.doubleSharp,
+  AlterationEnum.doubleFlat,
+  AlterationEnum.flat,
+  AlterationEnum.natural,
+  AlterationEnum.sharp,
+  AlterationEnum.doubleSharp,
 ];
 
-export function getPreviousAlteration(needle: Alteration): Alteration {
+export function getPreviousAlteration(needle: AlterationEnum): AlterationEnum {
   return allAlterations[allAlterations.indexOf(needle) - 1];
 }
 

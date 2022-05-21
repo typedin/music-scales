@@ -1,75 +1,74 @@
-import { alterations } from "../../src/MusicalConstants";
+import { AlterationEnum } from "../../src/types";
 
-const { natural, flat, sharp, doubleSharp } = alterations;
 export const majorSixthNatural = [
   {
     input: {
       name: "C",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "A",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "D",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "B",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "E",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "C",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "F",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "D",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "G",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "E",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "A",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "F",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "B",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "G",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
   },
 ];
@@ -78,71 +77,71 @@ export const majorSixthFlats = [
   {
     input: {
       name: "C",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "A",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "D",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "B",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "E",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "C",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "F",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "D",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "G",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "E",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "A",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "F",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "B",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "G",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     },
   },
 ];
@@ -150,71 +149,71 @@ export const majorSixthSharps = [
   {
     input: {
       name: "C",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "A",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "D",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "B",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "E",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "C",
-      alteration: doubleSharp,
+      alteration: AlterationEnum.doubleSharp,
     },
   },
   {
     input: {
       name: "F",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "D",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "G",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "E",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "A",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "F",
-      alteration: doubleSharp,
+      alteration: AlterationEnum.doubleSharp,
     },
   },
   {
     input: {
       name: "B",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "G",
-      alteration: doubleSharp,
+      alteration: AlterationEnum.doubleSharp,
     },
   },
 ];

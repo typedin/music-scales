@@ -1,72 +1,74 @@
+import { AlterationEnum } from "../../src/types";
+
 export const majorSecondNatural = [
   {
     input: {
       name: "C",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "D",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "D",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "E",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "E",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "F",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "F",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "G",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "G",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "A",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "A",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "B",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "B",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
     output: {
       name: "C",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
   },
 ];
@@ -75,71 +77,71 @@ export const majorSecondSharps = [
   {
     input: {
       name: "C",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "D",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "D",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "E",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "E",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "F",
-      alteration: "𝄪",
+      alteration: AlterationEnum.doubleSharp,
     },
   },
   {
     input: {
       name: "F",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "G",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "G",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "A",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "A",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "B",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
       name: "B",
-      alteration: "#",
+      alteration: AlterationEnum.sharp,
     },
     output: {
       name: "C",
-      alteration: "𝄪",
+      alteration: AlterationEnum.doubleSharp,
     },
   },
 ];
@@ -148,71 +150,71 @@ export const majorSecondFlats = [
   {
     input: {
       name: "C",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "D",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "D",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "E",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "E",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "F",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
       name: "F",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "G",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "G",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "A",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "A",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "B",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
       name: "B",
-      alteration: "b",
+      alteration: AlterationEnum.flat,
     },
     output: {
       name: "C",
-      alteration: null,
+      alteration: AlterationEnum.natural,
     },
   },
 ];

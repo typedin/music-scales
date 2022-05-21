@@ -1,7 +1,7 @@
 export type Alteration = string | null;
 export interface Note {
   name: string;
-  alteration: Alteration;
+  alteration: AlterationEnum;
   octave?: number;
 }
 export type ScaleDegree = {
@@ -10,3 +10,11 @@ export type ScaleDegree = {
   alteration: string;
   function: string;
 };
+
+export enum AlterationEnum {
+  doubleFlat = "♭♭",
+  flat = "b",
+  natural = "",
+  sharp = "#",
+  doubleSharp = "𝄪",
+}

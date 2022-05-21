@@ -1,56 +1,55 @@
 import MajorScale from "../../src/scales/MajorScale";
-import { alterations } from "../../src/MusicalConstants";
+import { AlterationEnum } from "../../src/types";
 
-const { doubleFlat, flat, natural, sharp, doubleSharp } = alterations
 
 describe("MajorScale", () => {
   it("gets C major scale", () => {
     const scale = MajorScale({
       name: "C",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     });
 
     expect(scale).toEqual([
       {
         order: 1,
         name: "C",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "tonic",
       },
       {
         order: 2,
         name: "D",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "supertonic",
       },
       {
         order: 3,
         name: "E",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "mediant",
       },
       {
         order: 4,
         name: "F",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "subdominant",
       },
       {
         order: 5,
         name: "G",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "dominant",
       },
       {
         order: 6,
         name: "A",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "submediant",
       },
       {
         order: 7,
         name: "B",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "leading tone",
       },
     ]);
@@ -59,49 +58,49 @@ describe("MajorScale", () => {
   it("gets G major scale", () => {
     const scale = MajorScale({
       name: "G",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     });
     expect(scale).toEqual([
       {
         order: 1,
         name: "G",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "tonic",
       },
       {
         order: 2,
         name: "A",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "supertonic",
       },
       {
         order: 3,
         name: "B",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "mediant",
       },
       {
         order: 4,
         name: "C",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "subdominant",
       },
       {
         order: 5,
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         name: "D",
         function: "dominant",
       },
       {
         order: 6,
         name: "E",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "submediant",
       },
       {
         order: 7,
         name: "F",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "leading tone",
       },
     ]);
@@ -110,49 +109,49 @@ describe("MajorScale", () => {
   it("gets D major scale", () => {
     const scale = MajorScale({
       name: "D",
-      alteration: natural,
+      alteration: AlterationEnum.natural,
     });
     expect(scale).toEqual([
       {
         order: 1,
         name: "D",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "tonic",
       },
       {
         order: 2,
         name: "E",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "supertonic",
       },
       {
         order: 3,
         name: "F",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "mediant",
       },
       {
         order: 4,
         name: "G",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "subdominant",
       },
       {
         order: 5,
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         name: "A",
         function: "dominant",
       },
       {
         order: 6,
         name: "B",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "submediant",
       },
       {
         order: 7,
         name: "C",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "leading tone",
       },
     ]);
@@ -161,49 +160,49 @@ describe("MajorScale", () => {
   it("gets E flat major scale", () => {
     const scale = MajorScale({
       name: "E",
-      alteration: flat,
+      alteration: AlterationEnum.flat,
     });
     expect(scale).toEqual([
       {
         order: 1,
         name: "E",
-        alteration: flat,
+        alteration: AlterationEnum.flat,
         function: "tonic",
       },
       {
         order: 2,
         name: "F",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "supertonic",
       },
       {
         order: 3,
         name: "G",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "mediant",
       },
       {
         order: 4,
         name: "A",
-        alteration: flat,
+        alteration: AlterationEnum.flat,
         function: "subdominant",
       },
       {
         order: 5,
         name: "B",
-        alteration: flat,
+        alteration: AlterationEnum.flat,
         function: "dominant",
       },
       {
         order: 6,
         name: "C",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "submediant",
       },
       {
         order: 7,
         name: "D",
-        alteration: natural,
+        alteration: AlterationEnum.natural,
         function: "leading tone",
       },
     ]);
@@ -211,50 +210,50 @@ describe("MajorScale", () => {
   it("gets C sharp major scale", () => {
     const scale = MajorScale({
       name: "C",
-      alteration: sharp,
+      alteration: AlterationEnum.sharp,
     });
 
     expect(scale).toEqual([
       {
         order: 1,
         name: "C",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "tonic",
       },
       {
         order: 2,
         name: "D",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "supertonic",
       },
       {
         order: 3,
         name: "E",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "mediant",
       },
       {
         order: 4,
         name: "F",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "subdominant",
       },
       {
         order: 5,
         name: "G",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "dominant",
       },
       {
         order: 6,
         name: "A",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "submediant",
       },
       {
         order: 7,
         name: "B",
-        alteration: sharp,
+        alteration: AlterationEnum.sharp,
         function: "leading tone",
       },
     ]);
