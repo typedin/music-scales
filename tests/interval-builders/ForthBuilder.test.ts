@@ -1,5 +1,5 @@
 import ForthBuilder from "../../src/interval-builders/ForthBuilder";
-import { forthFlats, forthNatural, forthSharps } from "../__fixtures__/Forth";
+import { forthFlats, forthNatural, forthSharps } from "../__fixtures__/Forths";
 
 describe("ForthBuilder", () => {
   it("gets all perfect forths for natural notes", () => {

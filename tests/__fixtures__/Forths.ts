@@ -1,6 +1,6 @@
 import { alterations } from "../../src/MusicalConstants";
 
-const { doubleFlat, flat, natural, sharp, doubleSharp } = alterations;
+const { doubleFlat, flat, natural, sharp } = alterations;
 export const forthNatural = [
   {
     input: {
