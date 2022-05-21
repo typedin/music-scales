@@ -1,27 +1,26 @@
-import { Alteration, AlterationEnum, Note, ScaleDegree } from "./types";
-import { diatonicNoteNames } from "./MusicalConstants";
+import { AlterationEnum, DiatonicNoteEnum, Note, ScaleDegree } from "./types";
 
-import { alterations } from "./MusicalConstants";
+export function getNoteFromInterval(note: Note, interval: number): DiatonicNoteEnum {
 
-export function index(note: Note, offset = 0): number {
-  return (diatonicNoteNames.indexOf(note.name) + offset) % 12;
+  return Object.values(DiatonicNoteEnum)[index(note, interval)];
 }
 
-const allAlterations = [
-  AlterationEnum.doubleFlat,
-  AlterationEnum.flat,
-  AlterationEnum.natural,
-  AlterationEnum.sharp,
-  AlterationEnum.doubleSharp,
-];
+function index(note: Note, offset: number): number {
+  return (Object.values(DiatonicNoteEnum).indexOf(note.name) + offset) % 12;
+}
 
 export function getPreviousAlteration(needle: AlterationEnum): AlterationEnum {
-  return allAlterations[allAlterations.indexOf(needle) - 1];
+  return Object.values(AlterationEnum)[
+    Object.values(AlterationEnum).indexOf(needle) - 1
+  ];
 }
 
-export function getNextAlteration(needle: Alteration): Alteration {
-  return allAlterations[allAlterations.indexOf(needle) + 1];
+export function getNextAlteration(needle: AlterationEnum): AlterationEnum {
+  return Object.values(AlterationEnum)[
+    Object.values(AlterationEnum).indexOf(needle) + 1
+  ];
 }
+
 export function scaleBuilder(tonic: Note, applesauce: Array<any>) {
   return applesauce.map(
     (degree, index): ScaleDegree => ({

@@ -1,9 +1,9 @@
-export type Alteration = string | null;
 export interface Note {
-  name: string;
+  name: DiatonicNoteEnum;
   alteration: AlterationEnum;
   octave?: number;
 }
+
 export type ScaleDegree = {
   order: number;
   name: string;
@@ -17,4 +17,19 @@ export enum AlterationEnum {
   natural = "",
   sharp = "#",
   doubleSharp = "𝄪",
+}
+
+export enum DiatonicNoteEnum {
+  C = "C",
+  C_SHARP = "-",
+  D = "D",
+  D_SHARP = "-",
+  E = "E",
+  F = "F",
+  F_SHARP = "-",
+  G = "G",
+  G_SHARP = "-",
+  A = "A",
+  A_SHARP = "-",
+  B = "B",
 }

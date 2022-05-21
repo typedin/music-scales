@@ -1,14 +1,13 @@
 import { Note } from "../types";
-import { getPreviousAlteration, index } from "../helpers";
-import { diatonicNoteNames } from "../MusicalConstants";
+import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
 export default function(note: Note): Note {
-  const name = diatonicNoteNames[index(note, 4)];
+  const name = getNoteFromInterval(note, 4);
   let alteration = getPreviousAlteration(note.alteration);
 
   if (name == "-") {
     return {
-      name: diatonicNoteNames[index(note, 3)],
+      name: getNoteFromInterval(note, 3),
       alteration: note.alteration,
     };
   }
