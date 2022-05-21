@@ -1,16 +1,60 @@
-import { musicalFunctions, musicalNotes } from "./MusicalConstants";
+import FifthBuilder from "../interval-builders/FifthBuilder";
+import ForthBuilder from "../interval-builders/ForthBuilder";
+import MajorSecond from "../interval-builders/MajorSecond";
+import MajorSeventh from "../interval-builders/MajorSeventh";
+import MajorSixth from "../interval-builders/MajorSixth";
+import MajorThird from "../interval-builders/MajorThird";
+import { Note } from "../types";
 
-export default function(note: string) {
-  const index = musicalNotes.indexOf(note);
+const shape = [
+  {
+    collable: undefined,
+    function: "tonic",
+  },
+  {
+    collable: MajorSecond,
+    function: "supertonic",
+  },
+  {
+    collable: MajorThird,
+    function: "mediant",
+  },
+  {
+    collable: ForthBuilder,
+    function: "subdominant",
+  },
+  {
+    collable: FifthBuilder,
+    function: "dominant",
+  },
+  {
+    collable: MajorSixth,
+    function: "submediant",
+  },
+  {
+    collable: MajorSeventh,
+    function: "leading tone",
+  },
+];
 
+export default function(note: Note) {
   const degrees = [];
-
-  for (let i = 0; i < 7; i++) {
-    degrees.push({
-      order: i + 1,
-      name: musicalNotes[(index + i) % 7],
-      function: musicalFunctions[i],
-    });
-  }
+  shape.forEach((degree, index) => {
+    if (index == 0) {
+      degrees.push({
+        order: index + 1,
+        name: note.name,
+        alteration: note.alteration,
+        function: degree.function,
+      });
+    } else {
+      degrees.push({
+        order: index + 1,
+        name: degree.collable(note).name,
+        alteration: degree.collable(note).alteration,
+        function: degree.function,
+      });
+    }
+  });
   return { degrees: degrees };
 }
