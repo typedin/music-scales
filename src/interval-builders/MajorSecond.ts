@@ -1,21 +1,11 @@
 import { Note } from "../types";
-import { index } from "../helpers";
+import { getNextAlteration, index } from "../helpers";
 import { diatonicNoteNames } from "../MusicalConstants";
 
 const specialCases = (name: string, note: Note): Note => {
-  let alteration: string | null;
-  if (note.alteration == "b") {
-    alteration = null;
-  }
-  if (!note.alteration) {
-    alteration = "#";
-  }
-  if (note.alteration == "#") {
-    alteration = "𝄪";
-  }
   return {
     name,
-    alteration,
+    alteration: getNextAlteration(note.alteration),
   };
 };
 
