@@ -10,7 +10,7 @@ describe("MajorScale", () => {
       alteration: natural,
     });
 
-    expect(scale.degrees).toEqual([
+    expect(scale).toEqual([
       {
         order: 1,
         name: "C",
@@ -61,7 +61,7 @@ describe("MajorScale", () => {
       name: "G",
       alteration: natural,
     });
-    expect(scale.degrees).toEqual([
+    expect(scale).toEqual([
       {
         order: 1,
         name: "G",
@@ -112,7 +112,7 @@ describe("MajorScale", () => {
       name: "D",
       alteration: natural,
     });
-    expect(scale.degrees).toEqual([
+    expect(scale).toEqual([
       {
         order: 1,
         name: "D",
@@ -163,7 +163,7 @@ describe("MajorScale", () => {
       name: "E",
       alteration: flat,
     });
-    expect(scale.degrees).toEqual([
+    expect(scale).toEqual([
       {
         order: 1,
         name: "E",
@@ -214,7 +214,7 @@ describe("MajorScale", () => {
       alteration: sharp,
     });
 
-    expect(scale.degrees).toEqual([
+    expect(scale).toEqual([
       {
         order: 1,
         name: "C",

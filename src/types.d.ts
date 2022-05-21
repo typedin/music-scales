@@ -4,3 +4,9 @@ export interface Note {
   alteration: Alteration;
   octave?: number;
 }
+export type ScaleDegree = {
+  order: number;
+  name: string;
+  alteration: string;
+  function: string;
+};
