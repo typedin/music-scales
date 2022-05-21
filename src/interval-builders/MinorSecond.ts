@@ -1,5 +1,5 @@
 import { Note, Alteration } from "../types";
-import { index } from "../helpers";
+import { getPreviousAlteration, index } from "../helpers";
 import { diatonicNoteNames } from "../MusicalConstants";
 
 function getName(note: Note): any {
@@ -9,32 +9,17 @@ function getName(note: Note): any {
   return diatonicNoteNames[index(note, 2)];
 }
 
-function getAlteration(note: Note, name: string): Alteration {
+function getAlteration(note: Note): Alteration {
   if (note.name == "B" || note.name == "E") {
     return note.alteration;
   }
 
-  if (name == "-") {
-    return null;
-  }
-
-  if (note.alteration == "#") {
-    return null;
-  }
-
-  if (note.alteration == "b") {
-    return "♭♭";
-  }
-
-  return "b";
+  return getPreviousAlteration(note.alteration);
 }
 
 export default function(note: Note): Note {
-  const name = getName(note);
-  const alteration = getAlteration(note, name);
-
   return {
-    name,
-    alteration,
+    name: getName(note),
+    alteration: getAlteration(note),
   };
 }
