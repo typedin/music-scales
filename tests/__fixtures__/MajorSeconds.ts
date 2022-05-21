@@ -1,49 +1,49 @@
-import { AlterationEnum } from "../../src/types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
 export const majorSecondNatural = [
   {
     input: {
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.natural,
     },
     output: {
-      name: "D",
+      name: DiatonicNoteEnum.D,
       alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
-      name: "D",
+      name: DiatonicNoteEnum.D,
       alteration: AlterationEnum.natural,
     },
     output: {
-      name: "E",
+      name: DiatonicNoteEnum.E,
       alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
-      name: "E",
+      name: DiatonicNoteEnum.E,
       alteration: AlterationEnum.natural,
     },
     output: {
-      name: "F",
+      name: DiatonicNoteEnum.F,
       alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
-      name: "F",
+      name: DiatonicNoteEnum.F,
       alteration: AlterationEnum.natural,
     },
     output: {
-      name: "G",
+      name: DiatonicNoteEnum.G,
       alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
-      name: "G",
+      name: DiatonicNoteEnum.G,
       alteration: AlterationEnum.natural,
     },
     output: {
@@ -53,21 +53,21 @@ export const majorSecondNatural = [
   },
   {
     input: {
-      name: "A",
+      name: DiatonicNoteEnum.A,
       alteration: AlterationEnum.natural,
     },
     output: {
-      name: "B",
+      name: DiatonicNoteEnum.B,
       alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
-      name: "B",
+      name: DiatonicNoteEnum.B,
       alteration: AlterationEnum.natural,
     },
     output: {
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.sharp,
     },
   },
@@ -76,71 +76,71 @@ export const majorSecondNatural = [
 export const majorSecondSharps = [
   {
     input: {
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.sharp,
     },
     output: {
-      name: "D",
+      name: DiatonicNoteEnum.D,
       alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
-      name: "D",
+      name: DiatonicNoteEnum.D,
       alteration: AlterationEnum.sharp,
     },
     output: {
-      name: "E",
+      name: DiatonicNoteEnum.E,
       alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
-      name: "E",
+      name: DiatonicNoteEnum.E,
       alteration: AlterationEnum.sharp,
     },
     output: {
-      name: "F",
+      name: DiatonicNoteEnum.F,
       alteration: AlterationEnum.doubleSharp,
     },
   },
   {
     input: {
-      name: "F",
+      name: DiatonicNoteEnum.F,
       alteration: AlterationEnum.sharp,
     },
     output: {
-      name: "G",
+      name: DiatonicNoteEnum.G,
       alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
-      name: "G",
+      name: DiatonicNoteEnum.G,
       alteration: AlterationEnum.sharp,
     },
     output: {
-      name: "A",
+      name: DiatonicNoteEnum.A,
       alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
-      name: "A",
+      name: DiatonicNoteEnum.A,
       alteration: AlterationEnum.sharp,
     },
     output: {
-      name: "B",
+      name: DiatonicNoteEnum.B,
       alteration: AlterationEnum.sharp,
     },
   },
   {
     input: {
-      name: "B",
+      name: DiatonicNoteEnum.B,
       alteration: AlterationEnum.sharp,
     },
     output: {
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.doubleSharp,
     },
   },
@@ -149,71 +149,71 @@ export const majorSecondSharps = [
 export const majorSecondFlats = [
   {
     input: {
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.flat,
     },
     output: {
-      name: "D",
+      name: DiatonicNoteEnum.D,
       alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
-      name: "D",
+      name: DiatonicNoteEnum.D,
       alteration: AlterationEnum.flat,
     },
     output: {
-      name: "E",
+      name: DiatonicNoteEnum.E,
       alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
-      name: "E",
+      name: DiatonicNoteEnum.E,
       alteration: AlterationEnum.flat,
     },
     output: {
-      name: "F",
+      name: DiatonicNoteEnum.F,
       alteration: AlterationEnum.natural,
     },
   },
   {
     input: {
-      name: "F",
+      name: DiatonicNoteEnum.F,
       alteration: AlterationEnum.flat,
     },
     output: {
-      name: "G",
+      name: DiatonicNoteEnum.G,
       alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
-      name: "G",
+      name: DiatonicNoteEnum.G,
       alteration: AlterationEnum.flat,
     },
     output: {
-      name: "A",
+      name: DiatonicNoteEnum.A,
       alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
-      name: "A",
+      name: DiatonicNoteEnum.A,
       alteration: AlterationEnum.flat,
     },
     output: {
-      name: "B",
+      name: DiatonicNoteEnum.B,
       alteration: AlterationEnum.flat,
     },
   },
   {
     input: {
-      name: "B",
+      name: DiatonicNoteEnum.B,
       alteration: AlterationEnum.flat,
     },
     output: {
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.natural,
     },
   },
