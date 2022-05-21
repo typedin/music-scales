@@ -1,54 +1,54 @@
 import { MinorHarmonicScale, MinorMelodicScale } from "../../src/scales/MinorScale";
-import { AlterationEnum } from "../../src/types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
 
 describe("MinorScale", () => {
   it("gets C minor harmonic scale", () => {
     const scale = MinorHarmonicScale({
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.natural,
     });
 
     expect(scale).toEqual([
       {
         order: 1,
-        name: "C",
+        name: DiatonicNoteEnum.C,
         alteration: AlterationEnum.natural,
         function: "tonic",
       },
       {
         order: 2,
-        name: "D",
+        name: DiatonicNoteEnum.D,
         alteration: AlterationEnum.natural,
         function: "supertonic",
       },
       {
         order: 3,
-        name: "E",
+        name: DiatonicNoteEnum.E,
         alteration: AlterationEnum.flat,
         function: "mediant",
       },
       {
         order: 4,
-        name: "F",
+        name: DiatonicNoteEnum.F,
         alteration: AlterationEnum.natural,
         function: "subdominant",
       },
       {
         order: 5,
-        name: "G",
+        name: DiatonicNoteEnum.G,
         alteration: AlterationEnum.natural,
         function: "dominant",
       },
       {
         order: 6,
-        name: "A",
+        name: DiatonicNoteEnum.A,
         alteration: AlterationEnum.flat,
         function: "submediant",
       },
       {
         order: 7,
-        name: "B",
+        name: DiatonicNoteEnum.B,
         alteration: AlterationEnum.natural,
         function: "leading tone",
       },
@@ -57,50 +57,50 @@ describe("MinorScale", () => {
 
   it("gets C minor melodic ascendant scale", () => {
     const scale = MinorMelodicScale({
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.natural,
     });
 
     expect(scale.ascendant).toEqual([
       {
         order: 1,
-        name: "C",
+        name: DiatonicNoteEnum.C,
         alteration: AlterationEnum.natural,
         function: "tonic",
       },
       {
         order: 2,
-        name: "D",
+        name: DiatonicNoteEnum.D,
         alteration: AlterationEnum.natural,
         function: "supertonic",
       },
       {
         order: 3,
-        name: "E",
+        name: DiatonicNoteEnum.E,
         alteration: AlterationEnum.flat,
         function: "mediant",
       },
       {
         order: 4,
-        name: "F",
+        name: DiatonicNoteEnum.F,
         alteration: AlterationEnum.natural,
         function: "subdominant",
       },
       {
         order: 5,
-        name: "G",
+        name: DiatonicNoteEnum.G,
         alteration: AlterationEnum.natural,
         function: "dominant",
       },
       {
         order: 6,
-        name: "A",
+        name: DiatonicNoteEnum.A,
         alteration: AlterationEnum.natural,
         function: "submediant",
       },
       {
         order: 7,
-        name: "B",
+        name: DiatonicNoteEnum.B,
         alteration: AlterationEnum.natural,
         function: "leading tone",
       },
@@ -109,50 +109,50 @@ describe("MinorScale", () => {
 
   it("gets C minor melodic descendant", () => {
     const scale = MinorMelodicScale({
-      name: "C",
+      name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.natural,
     });
 
     expect(scale.ascendant).toEqual([
       {
         order: 1,
-        name: "C",
+        name: DiatonicNoteEnum.C,
         alteration: AlterationEnum.natural,
         function: "tonic",
       },
       {
         order: 2,
-        name: "D",
+        name: DiatonicNoteEnum.D,
         alteration: AlterationEnum.natural,
         function: "supertonic",
       },
       {
         order: 3,
-        name: "E",
+        name: DiatonicNoteEnum.E,
         alteration: AlterationEnum.flat,
         function: "mediant",
       },
       {
         order: 4,
-        name: "F",
+        name: DiatonicNoteEnum.F,
         alteration: AlterationEnum.natural,
         function: "subdominant",
       },
       {
         order: 5,
-        name: "G",
+        name: DiatonicNoteEnum.G,
         alteration: AlterationEnum.natural,
         function: "dominant",
       },
       {
         order: 6,
-        name: "A",
+        name: DiatonicNoteEnum.A,
         alteration: AlterationEnum.natural,
         function: "submediant",
       },
       {
         order: 7,
-        name: "B",
+        name: DiatonicNoteEnum.B,
         alteration: AlterationEnum.natural,
         function: "leading tone",
       },
