@@ -1,6 +1,6 @@
 import { alterations } from "../../src/MusicalConstants";
 
-const { doubleFlat, flat, natural, sharp, doubleSharp } = alterations;
+const { flat, natural, sharp, doubleSharp } = alterations;
 
 export const fifthNaturals = [
   {
