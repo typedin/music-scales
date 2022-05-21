@@ -1,32 +1,40 @@
+import { Note, Alteration } from "../types";
 import { index } from "../helpers";
-import { diatonicScale } from "../MusicalConstants";
+import { diatonicNoteNames } from "../MusicalConstants";
 
-export default function(note: string): any {
-  if (note == "E#") {
-    return "F#";
+function getName(note: Note): any {
+  if (note.name == "B" || note.name == "E") {
+    return diatonicNoteNames[index(note, 1)];
   }
-  if (note == "Eb") {
-    return "Fb";
-  }
-  if (note == "B#") {
-    return "C#";
-  }
-  if (note == "Bb") {
-    return "Cb";
+  return diatonicNoteNames[index(note, 2)];
+}
+
+function getAlteration(note: Note, name: string): Alteration {
+  if (note.name == "B" || note.name == "E") {
+    return note.alteration;
   }
 
-  let applesauce = diatonicScale[index(note, 2)];
-  if (note[1] == "#") {
-    return applesauce;
-  }
-  if (note[1] == "b") {
-    return applesauce + "♭♭";
+  if (name == "-") {
+    return null;
   }
 
-  let minorSecond = diatonicScale[index(note, 1)];
-  if (minorSecond == "-") {
-    return applesauce + "b";
+  if (note.alteration == "#") {
+    return null;
   }
 
-  return minorSecond;
+  if (note.alteration == "b") {
+    return "♭♭";
+  }
+
+  return "b";
+}
+
+export default function(note: Note): Note {
+  const name = getName(note);
+  const alteration = getAlteration(note, name);
+
+  return {
+    name,
+    alteration,
+  };
 }

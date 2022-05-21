@@ -1,33 +1,34 @@
+import { Note } from "../types";
 import { index } from "../helpers";
-import { diatonicScale } from "../MusicalConstants";
+import { diatonicNoteNames } from "../MusicalConstants";
 
-export default function(note: string): any {
-  if (note == "Eb") {
-    return "F";
+const specialCases = (name: string, note: Note): Note => {
+  let alteration: string | null;
+  if (note.alteration == "b") {
+    alteration = null;
   }
-  if (note == "Bb") {
-    return "C";
+  if (!note.alteration) {
+    alteration = "#";
   }
-  if (note == "E#") {
-    return "F𝄪";
+  if (note.alteration == "#") {
+    alteration = "𝄪";
   }
-  if (note == "B#") {
-    return "C𝄪";
-  }
+  return {
+    name,
+    alteration,
+  };
+};
 
-  let majorSecond = diatonicScale[index(note, 2)];
-
-  if (majorSecond == "-") {
-    return diatonicScale[index(note, 1)] + "#";
+export default function(note: Note): Note {
+  switch (note.name) {
+    case "E":
+      return specialCases("F", note);
+    case "B":
+      return specialCases("C", note);
+    default:
+      return {
+        name: diatonicNoteNames[index(note, 2)],
+        alteration: note.alteration,
+      };
   }
-
-  if (note[1] == "#") {
-    majorSecond += "#";
-  }
-
-  if (note[1] == "b") {
-    majorSecond += "b";
-  }
-
-  return majorSecond;
 }

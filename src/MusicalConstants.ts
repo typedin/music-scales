@@ -1,4 +1,18 @@
-const diatonicScale = [
+const [natural, flat, sharp, doubleSharp, doubleFlat] = [
+  null,
+  "b",
+  "#",
+  "𝄪",
+  "♭♭",
+];
+const alterations = {
+  natural,
+  flat,
+  sharp,
+  doubleSharp,
+  doubleFlat,
+};
+const diatonicNoteNames = [
   "C",
   "-",
   "D",
@@ -25,4 +39,10 @@ const musicalFunctions: Array<string> = [
 const sharps: Array<string> = ["F", "C", "G", "D", "A", "E", "B"];
 const musicalNotes: Array<string> = ["C", "D", "E", "F", "G", "A", "B"];
 
-export { musicalNotes, musicalFunctions, sharps, diatonicScale };
+export {
+  musicalNotes,
+  musicalFunctions,
+  sharps,
+  diatonicNoteNames,
+  alterations,
+};
