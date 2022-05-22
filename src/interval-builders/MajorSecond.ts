@@ -8,7 +8,7 @@ const specialCases = (name: DiatonicNoteEnum, note: Note): Note => {
   };
 };
 
-const MajorSecond: IntervalBuilder = function(note: Note): Note {
+const MajorSecond: IntervalBuilder = function (note: Note): Note {
   switch (note.name) {
     case "E":
       return specialCases(DiatonicNoteEnum.F, note);

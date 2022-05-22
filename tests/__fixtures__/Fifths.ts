@@ -1,6 +1,5 @@
 import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
-
 export const fifthNaturals = [
   {
     input: {
@@ -219,4 +218,3 @@ export const fifthSharps = [
     },
   },
 ];
-

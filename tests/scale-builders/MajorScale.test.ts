@@ -1,7 +1,6 @@
 import MajorScale from "../../src/scale-builders/MajorScale";
 import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
-
 describe("MajorScale", () => {
   it("gets C major scale", () => {
     const scale = MajorScale({

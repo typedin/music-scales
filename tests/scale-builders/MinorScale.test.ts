@@ -1,6 +1,8 @@
 import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
-import { MinorHarmonicScale, MinorMelodicScale } from "../../src/scale-builders/MinorScale";
-
+import {
+  MinorHarmonicScale,
+  MinorMelodicScale,
+} from "../../src/scale-builders/MinorScale";
 
 describe("MinorScale", () => {
   it("gets C minor harmonic scale", () => {

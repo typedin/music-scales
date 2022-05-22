@@ -16,7 +16,7 @@ function getAlteration(note: Note): AlterationEnum {
   return getPreviousAlteration(note.alteration);
 }
 
-const MinorSecond: IntervalBuilder = function(note: Note): Note {
+const MinorSecond: IntervalBuilder = function (note: Note): Note {
   return {
     name: getName(note),
     alteration: getAlteration(note),

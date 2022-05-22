@@ -1,7 +1,7 @@
 import { IntervalBuilder, Note } from "../types";
 import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
-const MinorThird: IntervalBuilder = function(note: Note): Note {
+const MinorThird: IntervalBuilder = function (note: Note): Note {
   let name = getNoteFromInterval(note, 4);
   let alteration = getPreviousAlteration(note.alteration);
 
