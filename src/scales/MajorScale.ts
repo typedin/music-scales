@@ -1,4 +1,4 @@
-import { Note } from "../types";
+import { DegreeBuilder, Note } from "../types";
 import { scaleBuilder } from "../helpers";
 import FifthBuilder from "../interval-builders/FifthBuilder";
 import ForthBuilder from "../interval-builders/ForthBuilder";
@@ -7,33 +7,33 @@ import MajorSeventh from "../interval-builders/MajorSeventh";
 import MajorSixth from "../interval-builders/MajorSixth";
 import MajorThird from "../interval-builders/MajorThird";
 
-const MajorScale = [
+const MajorScale: Array<DegreeBuilder> = [
   {
-    collable: undefined,
+    callable: undefined,
     function: "tonic",
   },
   {
-    collable: MajorSecond,
+    callable: MajorSecond,
     function: "supertonic",
   },
   {
-    collable: MajorThird,
+    callable: MajorThird,
     function: "mediant",
   },
   {
-    collable: ForthBuilder,
+    callable: ForthBuilder,
     function: "subdominant",
   },
   {
-    collable: FifthBuilder,
+    callable: FifthBuilder,
     function: "dominant",
   },
   {
-    collable: MajorSixth,
+    callable: MajorSixth,
     function: "submediant",
   },
   {
-    collable: MajorSeventh,
+    callable: MajorSeventh,
     function: "leading tone",
   },
 ];

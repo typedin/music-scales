@@ -1,7 +1,8 @@
-import { Note } from "../types";
+import { IntervalBuilder, Note } from "../types";
 import FifthBuilder from "./FifthBuilder";
 import MajorSecond from "./MajorSecond";
 
-export default function(note: Note): Note {
-  return MajorSecond(FifthBuilder(note));
-}
+const MajorSixth: IntervalBuilder = (note: Note): Note =>
+  MajorSecond(FifthBuilder(note));
+
+export default MajorSixth;

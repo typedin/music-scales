@@ -1,7 +1,7 @@
-import { Note } from "../types";
+import { IntervalBuilder, Note } from "../types";
 import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
-export default function(note: Note): Note {
+const ForthBuilder: IntervalBuilder = (note: Note): Note => {
   let name = getNoteFromInterval(note, 5);
   let alteration = note.alteration;
 
@@ -14,4 +14,6 @@ export default function(note: Note): Note {
     name,
     alteration,
   };
-}
+};
+
+export default ForthBuilder;

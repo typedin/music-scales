@@ -1,19 +1,18 @@
-import { Note } from "../types";
+import { IntervalBuilder, Note } from "../types";
 import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
-export default function(note: Note): Note {
-  const name = getNoteFromInterval(note, 4);
+const MinorThird: IntervalBuilder = function(note: Note): Note {
+  let name = getNoteFromInterval(note, 4);
   let alteration = getPreviousAlteration(note.alteration);
 
   if (name == "-") {
-    return {
-      name: getNoteFromInterval(note, 3),
-      alteration: note.alteration,
-    };
+    name = getNoteFromInterval(note, 3);
+    alteration = note.alteration;
   }
 
   return {
     name,
     alteration,
   };
-}
+};
+export default MinorThird;

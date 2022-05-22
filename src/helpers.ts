@@ -1,7 +1,15 @@
-import { AlterationEnum, DiatonicNoteEnum, Note, ScaleDegree } from "./types";
+import {
+  AlterationEnum,
+  DiatonicNoteEnum,
+  Note,
+  ScaleDegree,
+  DegreeBuilder,
+} from "./types";
 
-export function getNoteFromInterval(note: Note, interval: number): DiatonicNoteEnum {
-
+export function getNoteFromInterval(
+  note: Note,
+  interval: number
+): DiatonicNoteEnum {
   return Object.values(DiatonicNoteEnum)[index(note, interval)];
 }
 
@@ -21,14 +29,19 @@ export function getNextAlteration(needle: AlterationEnum): AlterationEnum {
   ];
 }
 
-export function scaleBuilder(tonic: Note, applesauce: Array<any>) {
-  return applesauce.map(
-    (degree, index): ScaleDegree => ({
+export function scaleBuilder(
+  tonic: Note,
+  degreeBuilders: Array<DegreeBuilder>
+) {
+  return degreeBuilders.map(
+    (degreeBuilder: DegreeBuilder, index): ScaleDegree => ({
       order: index + 1,
-      name: index == 0 ? tonic.name : degree.collable(tonic).name,
+      name: index == 0 ? tonic.name : degreeBuilder.callable(tonic).name,
       alteration:
-        index == 0 ? tonic.alteration : degree.collable(tonic).alteration,
-      function: degree.function,
+        index == 0
+          ? tonic.alteration
+          : degreeBuilder.callable(tonic).alteration,
+      function: degreeBuilder.function,
     })
   );
 }

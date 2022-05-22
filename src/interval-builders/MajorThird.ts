@@ -1,17 +1,19 @@
 import { getNextAlteration, getNoteFromInterval } from "../helpers";
-import { Note } from "../types";
+import { IntervalBuilder, Note } from "../types";
 
-export default function(note: Note): Note {
-  const name = getNoteFromInterval(note, 4);
+const MajorThird: IntervalBuilder = (note: Note): Note => {
+  let name = getNoteFromInterval(note, 4);
+  let alteration = note.alteration;
+
   if (name == "-") {
-    return {
-      name: getNoteFromInterval(note, 3),
-      alteration: getNextAlteration(note.alteration),
-    };
+    name = getNoteFromInterval(note, 3);
+    alteration = getNextAlteration(note.alteration);
   }
 
   return {
     name,
-    alteration: note.alteration,
+    alteration,
   };
-}
+};
+
+export default MajorThird;

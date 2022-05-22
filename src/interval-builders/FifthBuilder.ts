@@ -1,7 +1,7 @@
-import { Note } from "../types";
+import { IntervalBuilder, Note } from "../types";
 import { getNoteFromInterval, getNextAlteration } from "../helpers";
 
-export default function(note: Note): Note {
+const FifthBuilder: IntervalBuilder = function(note: Note): Note {
   let name = getNoteFromInterval(note, 7);
   let alteration = note.alteration;
 
@@ -14,4 +14,6 @@ export default function(note: Note): Note {
     name,
     alteration,
   };
-}
+};
+
+export default FifthBuilder;

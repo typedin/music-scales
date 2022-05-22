@@ -1,4 +1,4 @@
-import { Note } from "../types";
+import { DegreeBuilder, Note } from "../types";
 import { scaleBuilder } from "../helpers";
 import FifthBuilder from "../interval-builders/FifthBuilder";
 import ForthBuilder from "../interval-builders/ForthBuilder";
@@ -9,95 +9,95 @@ import MinorSixth from "../interval-builders/MinorSixth";
 import MajorSixth from "../interval-builders/MajorSixth";
 import MinorSeventh from "../interval-builders/MinorSeventh";
 
-const MinorHarmonicSkeleton = [
+const MinorHarmonicSkeleton: Array<DegreeBuilder> = [
   {
-    collable: undefined,
+    callable: undefined,
     function: "tonic",
   },
   {
-    collable: MajorSecond,
+    callable: MajorSecond,
     function: "supertonic",
   },
   {
-    collable: MinorThird,
+    callable: MinorThird,
     function: "mediant",
   },
   {
-    collable: ForthBuilder,
+    callable: ForthBuilder,
     function: "subdominant",
   },
   {
-    collable: FifthBuilder,
+    callable: FifthBuilder,
     function: "dominant",
   },
   {
-    collable: MinorSixth,
+    callable: MinorSixth,
     function: "submediant",
   },
   {
-    collable: MajorSeventh,
+    callable: MajorSeventh,
     function: "leading tone",
   },
 ];
 
 const MinorMelocicAscendantSkeleton = [
   {
-    collable: undefined,
+    callable: undefined,
     function: "tonic",
   },
   {
-    collable: MajorSecond,
+    callable: MajorSecond,
     function: "supertonic",
   },
   {
-    collable: MinorThird,
+    callable: MinorThird,
     function: "mediant",
   },
   {
-    collable: ForthBuilder,
+    callable: ForthBuilder,
     function: "subdominant",
   },
   {
-    collable: FifthBuilder,
+    callable: FifthBuilder,
     function: "dominant",
   },
   {
-    collable: MajorSixth,
+    callable: MajorSixth,
     function: "submediant",
   },
   {
-    collable: MajorSeventh,
+    callable: MajorSeventh,
     function: "leading tone",
   },
 ];
 
 const MinorMelocicDescendantSkeleton = [
   {
-    collable: undefined,
+    callable: undefined,
     function: "tonic",
   },
   {
-    collable: MajorSecond,
+    callable: MajorSecond,
     function: "supertonic",
   },
   {
-    collable: MinorThird,
+    callable: MinorThird,
     function: "mediant",
   },
   {
-    collable: ForthBuilder,
+    callable: ForthBuilder,
     function: "subdominant",
   },
   {
-    collable: FifthBuilder,
+    callable: FifthBuilder,
     function: "dominant",
   },
   {
-    collable: MinorSixth,
+    callable: MinorSixth,
     function: "submediant",
   },
   {
-    collable: MinorSeventh,
+    callable: MinorSeventh,
     function: "leading tone",
   },
 ];

@@ -33,3 +33,10 @@ export enum DiatonicNoteEnum {
   A_SHARP = "-",
   B = "B",
 }
+
+type IntervalBuilder = (note: Note) => Note;
+
+export type DegreeBuilder = {
+  function?: string;
+  callable?: IntervalBuilder;
+};

@@ -1,4 +1,4 @@
-import { Note, AlterationEnum } from "../types";
+import { Note, AlterationEnum, IntervalBuilder } from "../types";
 import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
 function getName(note: Note): any {
@@ -16,9 +16,11 @@ function getAlteration(note: Note): AlterationEnum {
   return getPreviousAlteration(note.alteration);
 }
 
-export default function(note: Note): Note {
+const MinorSecond: IntervalBuilder = function(note: Note): Note {
   return {
     name: getName(note),
     alteration: getAlteration(note),
   };
-}
+};
+
+export default MinorSecond;
