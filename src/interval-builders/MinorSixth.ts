@@ -1,7 +1,7 @@
 import { IntervalBuilder, Note } from "../types";
-import FifthBuilder from "./FifthBuilder";
+import PerfectFifth from "./PerfectFifth";
 import MinorSecond from "./MinorSecond";
 
 const MinorSixth: IntervalBuilder = (note: Note): Note =>
-  MinorSecond(FifthBuilder(note));
+  MinorSecond(PerfectFifth(note));
 export default MinorSixth;

@@ -1,8 +1,8 @@
 import { IntervalBuilder, Note } from "../types";
 import MajorThird from "./MajorThird";
-import FifthBuilder from "./FifthBuilder";
+import PerfectFifth from "./PerfectFifth";
 
 const MajorSeventh: IntervalBuilder = (note: Note): Note =>
-  MajorThird(FifthBuilder(note));
+  MajorThird(PerfectFifth(note));
 
 export default MajorSeventh;

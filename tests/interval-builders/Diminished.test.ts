@@ -1,6 +1,6 @@
 import Diminish from "../../src/interval-builders/Diminished";
-import FifthBuilder from "../../src/interval-builders/FifthBuilder";
-import ForthBuilder from "../../src/interval-builders/ForthBuilder";
+import PerfectFifth from "../../src/interval-builders/PerfectFifth";
+import PerfectForth from "../../src/interval-builders/PerfectForth";
 import MinorSecond from "../../src/interval-builders/MinorSecond";
 import MinorThird from "../../src/interval-builders/MinorThird";
 import OctaveBuilder from "../../src/interval-builders/OctaveBuilder";
@@ -36,7 +36,7 @@ describe("Diminished", () => {
   it("can diminish a forth", () => {
     expect(
       Diminish(
-        ForthBuilder({
+        PerfectForth({
           name: DiatonicNoteEnum.C,
           alteration: AlterationEnum.natural,
         })
@@ -50,7 +50,7 @@ describe("Diminished", () => {
   it("can diminish a fifth", () => {
     expect(
       Diminish(
-        FifthBuilder({
+        PerfectFifth({
           name: DiatonicNoteEnum.C,
           alteration: AlterationEnum.natural,
         })

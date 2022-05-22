@@ -1,7 +1,7 @@
 import { DegreeBuilder, Note } from "../types";
 import { scaleBuilder } from "../helpers";
-import FifthBuilder from "../interval-builders/FifthBuilder";
-import ForthBuilder from "../interval-builders/ForthBuilder";
+import PerfectFifth from "../interval-builders/PerfectFifth";
+import PerfectForth from "../interval-builders/PerfectForth";
 import MajorSecond from "../interval-builders/MajorSecond";
 import MajorSeventh from "../interval-builders/MajorSeventh";
 import MinorThird from "../interval-builders/MinorThird";
@@ -23,11 +23,11 @@ const MinorHarmonicSkeleton: Array<DegreeBuilder> = [
     function: "mediant",
   },
   {
-    callable: ForthBuilder,
+    callable: PerfectForth,
     function: "subdominant",
   },
   {
-    callable: FifthBuilder,
+    callable: PerfectFifth,
     function: "dominant",
   },
   {
@@ -54,11 +54,11 @@ const MinorMelocicAscendantSkeleton = [
     function: "mediant",
   },
   {
-    callable: ForthBuilder,
+    callable: PerfectForth,
     function: "subdominant",
   },
   {
-    callable: FifthBuilder,
+    callable: PerfectFifth,
     function: "dominant",
   },
   {
@@ -85,11 +85,11 @@ const MinorMelocicDescendantSkeleton = [
     function: "mediant",
   },
   {
-    callable: ForthBuilder,
+    callable: PerfectForth,
     function: "subdominant",
   },
   {
-    callable: FifthBuilder,
+    callable: PerfectFifth,
     function: "dominant",
   },
   {

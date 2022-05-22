@@ -1,7 +1,7 @@
 import { DegreeBuilder, Note } from "../types";
 import { scaleBuilder } from "../helpers";
-import FifthBuilder from "../interval-builders/FifthBuilder";
-import ForthBuilder from "../interval-builders/ForthBuilder";
+import PerfectFifth from "../interval-builders/PerfectFifth";
+import PerfectForth from "../interval-builders/PerfectForth";
 import MajorSecond from "../interval-builders/MajorSecond";
 import MajorSeventh from "../interval-builders/MajorSeventh";
 import MajorSixth from "../interval-builders/MajorSixth";
@@ -21,11 +21,11 @@ const MajorScale: Array<DegreeBuilder> = [
     function: "mediant",
   },
   {
-    callable: ForthBuilder,
+    callable: PerfectForth,
     function: "subdominant",
   },
   {
-    callable: FifthBuilder,
+    callable: PerfectFifth,
     function: "dominant",
   },
   {

@@ -1,7 +1,7 @@
 import { IntervalBuilder, Note } from "../types";
 import { getNoteFromInterval, getNextAlteration } from "../helpers";
 
-const FifthBuilder: IntervalBuilder = function(note: Note): Note {
+const PerfectFifth: IntervalBuilder = function (note: Note): Note {
   let name = getNoteFromInterval(note, 7);
   let alteration = note.alteration;
 
@@ -16,4 +16,4 @@ const FifthBuilder: IntervalBuilder = function(note: Note): Note {
   };
 };
 
-export default FifthBuilder;
+export default PerfectFifth;
