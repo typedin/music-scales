@@ -4,11 +4,10 @@ export function getNoteFromInterval(
   note: Note,
   interval: number
 ): DiatonicNoteEnum {
-  return Object.values(DiatonicNoteEnum)[index(note, interval)];
-}
+  const index = (note: Note, offset: number): number =>
+    (Object.values(DiatonicNoteEnum).indexOf(note.name) + offset) % 12;
 
-function index(note: Note, offset: number): number {
-  return (Object.values(DiatonicNoteEnum).indexOf(note.name) + offset) % 12;
+  return Object.values(DiatonicNoteEnum)[index(note, interval)];
 }
 
 export function getPreviousAlteration(needle: AlterationEnum): AlterationEnum {
