@@ -1,5 +1,4 @@
 import { DegreeBuilder, Note } from "../types";
-import { scaleBuilder } from "../helpers";
 import PerfectFifth from "../interval-builders/PerfectFifth";
 import PerfectForth from "../interval-builders/PerfectForth";
 import MajorSecond from "../interval-builders/MajorSecond";
@@ -8,6 +7,7 @@ import MinorThird from "../interval-builders/MinorThird";
 import MinorSixth from "../interval-builders/MinorSixth";
 import MajorSixth from "../interval-builders/MajorSixth";
 import MinorSeventh from "../interval-builders/MinorSeventh";
+import { ScaleBuilder } from "../ScaleBuilder";
 
 const MinorHarmonicSkeleton: Array<DegreeBuilder> = [
   {
@@ -103,12 +103,12 @@ const MinorMelocicDescendantSkeleton = [
 ];
 
 export function MinorHarmonicScale(note: Note) {
-  return scaleBuilder(note, MinorHarmonicSkeleton);
+  return ScaleBuilder(note, MinorHarmonicSkeleton);
 }
 
 export function MinorMelodicScale(note: Note) {
   return {
-    ascendant: scaleBuilder(note, MinorMelocicAscendantSkeleton),
-    descendant: scaleBuilder(note, MinorMelocicDescendantSkeleton),
+    ascendant: ScaleBuilder(note, MinorMelocicAscendantSkeleton),
+    descendant: ScaleBuilder(note, MinorMelocicDescendantSkeleton),
   };
 }

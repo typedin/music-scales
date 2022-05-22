@@ -1,4 +1,4 @@
-import MajorScale from "../../src/scales/MajorScale";
+import MajorScale from "../../src/scale-builders/MajorScale";
 import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
 

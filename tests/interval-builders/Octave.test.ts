@@ -1,10 +1,10 @@
-import OctaveBuilder from "../../src/interval-builders/OctaveBuilder";
+import Octave from "../../src/interval-builders/Octave";
 import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
-describe("OctaveBuilder", () => {
+describe("Octave", () => {
   it("builds an octave", () => {
     expect(
-      OctaveBuilder({
+      Octave({
         name: DiatonicNoteEnum.C,
         alteration: AlterationEnum.natural,
         octave: 4,

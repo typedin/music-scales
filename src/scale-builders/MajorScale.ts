@@ -1,11 +1,11 @@
 import { DegreeBuilder, Note } from "../types";
-import { scaleBuilder } from "../helpers";
 import PerfectFifth from "../interval-builders/PerfectFifth";
 import PerfectForth from "../interval-builders/PerfectForth";
 import MajorSecond from "../interval-builders/MajorSecond";
 import MajorSeventh from "../interval-builders/MajorSeventh";
 import MajorSixth from "../interval-builders/MajorSixth";
 import MajorThird from "../interval-builders/MajorThird";
+import { ScaleBuilder } from "../ScaleBuilder";
 
 const MajorScale: Array<DegreeBuilder> = [
   {
@@ -38,4 +38,4 @@ const MajorScale: Array<DegreeBuilder> = [
   },
 ];
 
-export default (note: Note) => scaleBuilder(note, MajorScale);
+export default (note: Note) => ScaleBuilder(note, MajorScale);

@@ -3,7 +3,7 @@ import PerfectFifth from "../../src/interval-builders/PerfectFifth";
 import PerfectForth from "../../src/interval-builders/PerfectForth";
 import MinorSecond from "../../src/interval-builders/MinorSecond";
 import MinorThird from "../../src/interval-builders/MinorThird";
-import OctaveBuilder from "../../src/interval-builders/OctaveBuilder";
+import Octave from "../../src/interval-builders/Octave";
 import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
 describe("Diminished", () => {
@@ -64,7 +64,7 @@ describe("Diminished", () => {
   it("can diminish an octave", () => {
     expect(
       Diminish(
-        OctaveBuilder({
+        Octave({
           name: DiatonicNoteEnum.C,
           alteration: AlterationEnum.natural,
           octave: 4,

@@ -1,5 +1,5 @@
-import { MinorHarmonicScale, MinorMelodicScale } from "../../src/scales/MinorScale";
 import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
+import { MinorHarmonicScale, MinorMelodicScale } from "../../src/scale-builders/MinorScale";
 
 
 describe("MinorScale", () => {
