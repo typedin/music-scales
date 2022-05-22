@@ -1,4 +1,4 @@
-import Diminish from "../../src/interval-builders/Diminished";
+import Diminish from "../../src/interval-builders/Diminish";
 import PerfectFifth from "../../src/interval-builders/PerfectFifth";
 import PerfectForth from "../../src/interval-builders/PerfectForth";
 import MinorSecond from "../../src/interval-builders/MinorSecond";
