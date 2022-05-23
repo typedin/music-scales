@@ -1,4 +1,4 @@
-import { IntervalBuilder, Note } from "../../src/types";
+import { IntervalBuilder, Note } from "../../types";
 
 const OctaveBuilder: IntervalBuilder = (note: Note): Note => ({
   ...note,

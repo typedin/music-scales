@@ -1,4 +1,4 @@
-import { DegreeBuilder, Note } from "../types";
+import { DegreeBuilder, Note } from "../../types/index";
 import PerfectFifth from "../interval-builders/PerfectFifth";
 import PerfectForth from "../interval-builders/PerfectForth";
 import MajorSecond from "../interval-builders/MajorSecond";
@@ -9,7 +9,7 @@ import { ScaleBuilder } from "../ScaleBuilder";
 
 const MajorScale: Array<DegreeBuilder> = [
   {
-    callable: (note) => note,
+    callable: (note: Note): Note => note,
     function: "tonic",
   },
   {

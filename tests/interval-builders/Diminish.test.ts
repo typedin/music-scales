@@ -4,7 +4,7 @@ import PerfectForth from "../../src/interval-builders/PerfectForth";
 import MinorSecond from "../../src/interval-builders/MinorSecond";
 import MinorThird from "../../src/interval-builders/MinorThird";
 import Octave from "../../src/interval-builders/Octave";
-import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../types";
 
 describe("Diminished", () => {
   it("can diminish a minor second", () => {

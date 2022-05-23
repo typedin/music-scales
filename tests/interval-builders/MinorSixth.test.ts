@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../types";
 import MinorSixth from "../../src/interval-builders/MinorSixth";
 
 describe("MinorSixth", () => {

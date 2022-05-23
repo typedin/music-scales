@@ -1,5 +1,5 @@
 import Octave from "../../src/interval-builders/Octave";
-import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../types";
 
 describe("Octave", () => {
   it("builds an octave", () => {
