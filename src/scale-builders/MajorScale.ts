@@ -9,7 +9,7 @@ import { ScaleBuilder } from "../ScaleBuilder";
 
 const MajorScale: Array<DegreeBuilder> = [
   {
-    callable: undefined,
+    callable: (note) => note,
     function: "tonic",
   },
   {

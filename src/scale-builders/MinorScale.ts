@@ -11,7 +11,7 @@ import { ScaleBuilder } from "../ScaleBuilder";
 
 const MinorHarmonicSkeleton: Array<DegreeBuilder> = [
   {
-    callable: undefined,
+    callable: (note: Note) => note,
     function: "tonic",
   },
   {
@@ -42,7 +42,7 @@ const MinorHarmonicSkeleton: Array<DegreeBuilder> = [
 
 const MinorMelocicAscendantSkeleton = [
   {
-    callable: undefined,
+    callable: (note: Note) => note,
     function: "tonic",
   },
   {
@@ -73,7 +73,7 @@ const MinorMelocicAscendantSkeleton = [
 
 const MinorMelocicDescendantSkeleton = [
   {
-    callable: undefined,
+    callable: (note: Note) => note,
     function: "tonic",
   },
   {

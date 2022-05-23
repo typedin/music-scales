@@ -37,6 +37,6 @@ export enum DiatonicNoteEnum {
 type IntervalBuilder = (note: Note) => Note;
 
 export type DegreeBuilder = {
-  function?: string;
-  callable?: IntervalBuilder;
+  function: string;
+  callable: IntervalBuilder;
 };
