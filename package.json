@@ -5,12 +5,14 @@
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "*.d.ts"
   ],
   "scripts": {
     "test": "test",
     "prepare": "husky install",
-    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepublish": "npm run tsc"
   },
   "author": "",
   "license": "ISC",
