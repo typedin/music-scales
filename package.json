@@ -1,11 +1,13 @@
 {
   "name": "music-scales",
+  "author": "typedin",
   "version": "0.0.1",
+  "license": "ISC",
   "description": "A typescript package to help define music scales and build interval.",
+  "repository": "https://github.com/typedin/music-scales",
   "main": "./lib/cjs/index.js",
   "types": "types/index.d.ts",
   "module": "./lib/esm/index.js",
-  "repository": "https://github.com/tailwindlabs/tailwindcss.git",
   "files": [
     "lib/",
     "*.d.ts",
@@ -17,8 +19,6 @@
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "prepublish": "npm run tsc"
   },
-  "author": "typedin",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
