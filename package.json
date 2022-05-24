@@ -1,6 +1,6 @@
 {
   "name": "music-scales",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A typescript package to help define music scales and build interval.",
   "main": "./lib/cjs/index.js",
   "types": "types/index.d.ts",
@@ -17,7 +17,7 @@
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
     "prepublish": "npm run tsc"
   },
-  "author": "",
+  "author": "typedin",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.12",
