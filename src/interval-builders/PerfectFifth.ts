@@ -1,4 +1,4 @@
-import { IntervalBuilder, Note } from "../../types";
+import { IntervalBuilder, Note } from "../types";
 import { getNoteFromInterval, getNextAlteration } from "../helpers";
 
 const PerfectFifth: IntervalBuilder = function (note: Note): Note {

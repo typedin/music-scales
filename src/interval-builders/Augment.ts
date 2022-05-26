@@ -1,5 +1,5 @@
 import { getNextAlteration } from "../helpers";
-import { Note } from "../../types";
+import { Note } from "../types";
 
 const Augment = (note: Note): Note => ({
   ...note,

@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../../types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../src/types";
 
 export const minorThirdFlats = [
   {

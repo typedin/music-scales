@@ -1,5 +1,5 @@
 import { getNextAlteration, getNoteFromInterval } from "../helpers";
-import { IntervalBuilder, Note } from "../../types";
+import { IntervalBuilder, Note } from "../types";
 
 const MajorThird: IntervalBuilder = (note: Note): Note => {
   let name = getNoteFromInterval(note, 4);

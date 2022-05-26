@@ -40,4 +40,3 @@ export type DegreeBuilder = {
   function: string;
   callable: IntervalBuilder;
 };
-

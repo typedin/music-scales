@@ -1,5 +1,5 @@
 import { getPreviousAlteration } from "../helpers";
-import { Note } from "../../types";
+import { Note } from "../types";
 
 function Diminish(note: Note): Note {
   return {
