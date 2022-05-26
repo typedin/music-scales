@@ -21,3 +21,4 @@ export function getNextAlteration(needle: AlterationEnum): AlterationEnum {
     Object.values(AlterationEnum).indexOf(needle) + 1
   ];
 }
+

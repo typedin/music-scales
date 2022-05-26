@@ -1,5 +1,5 @@
 import { IntervalBuilder, Note } from "../../types";
-import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
+import { getNoteFromInterval, getPreviousAlteration } from "../../helpers";
 
 const ForthBuilder: IntervalBuilder = (note: Note): Note => {
   let name = getNoteFromInterval(note, 5);
