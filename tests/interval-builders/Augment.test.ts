@@ -1,8 +1,8 @@
-import Augment from "../../src/interval-builders/Augment";
-import MajorThird from "../../src/interval-builders/MajorThird";
-import PerfectFifth from "../../src/interval-builders/PerfectFifth";
-import PerfectForth from "../../src/interval-builders/PerfectForth";
-import { AlterationEnum, DiatonicNoteEnum } from "../../types";
+import Augment from "@/interval-builders/Augment";
+import MajorThird from "@/interval-builders/MajorThird";
+import PerfectFifth from "@/interval-builders/PerfectFifth";
+import PerfectForth from "@/interval-builders/PerfectForth";
+import { AlterationEnum, DiatonicNoteEnum } from "#types/";
 
 describe("Augment", () => {
   it("can augment a major third", () => {

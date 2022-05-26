@@ -10,7 +10,14 @@
     "outDir": "./lib/esm",
     "sourceMap": true,
     "strictNullChecks": true,
-    "allowJs": true
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["types/*"],
+      "/*": ["*"]
+    }
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "exclude": ["node_modules"]
 }
