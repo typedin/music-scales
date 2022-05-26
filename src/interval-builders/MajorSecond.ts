@@ -1,5 +1,5 @@
 import { DiatonicNoteEnum, IntervalBuilder, Note } from "../../types";
-import { getNextAlteration, getNoteFromInterval } from "../../helpers";
+import { getNextAlteration, getNoteFromInterval } from "../helpers";
 
 const specialCases = (name: DiatonicNoteEnum, note: Note): Note => {
   return {

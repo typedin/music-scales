@@ -1,4 +1,4 @@
-import { getPreviousAlteration } from "../../helpers";
+import { getPreviousAlteration } from "../helpers";
 import { Note } from "../../types";
 
 function Diminish(note: Note): Note {

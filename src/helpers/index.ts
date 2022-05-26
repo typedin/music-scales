@@ -1,4 +1,4 @@
-import { Note, AlterationEnum, DiatonicNoteEnum } from "../types";
+import { Note, AlterationEnum, DiatonicNoteEnum } from "../../types";
 
 export function getNoteFromInterval(
   note: Note,
@@ -21,4 +21,3 @@ export function getNextAlteration(needle: AlterationEnum): AlterationEnum {
     Object.values(AlterationEnum).indexOf(needle) + 1
   ];
 }
-

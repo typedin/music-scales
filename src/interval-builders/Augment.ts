@@ -1,4 +1,4 @@
-import { getNextAlteration } from "../../helpers";
+import { getNextAlteration } from "../helpers";
 import { Note } from "../../types";
 
 const Augment = (note: Note): Note => ({

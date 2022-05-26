@@ -1,5 +1,5 @@
 import { Note, AlterationEnum, IntervalBuilder } from "../../types";
-import { getNoteFromInterval, getPreviousAlteration } from "../../helpers";
+import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
 function getName(note: Note): any {
   if (note.name == "B" || note.name == "E") {

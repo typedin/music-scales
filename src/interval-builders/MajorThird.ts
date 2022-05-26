@@ -1,4 +1,4 @@
-import { getNextAlteration, getNoteFromInterval } from "../../helpers";
+import { getNextAlteration, getNoteFromInterval } from "../helpers";
 import { IntervalBuilder, Note } from "../../types";
 
 const MajorThird: IntervalBuilder = (note: Note): Note => {

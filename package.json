@@ -4,12 +4,14 @@
   "version": "0.0.7",
   "license": "ISC",
   "description": "A typescript package to help define music scales and build interval.",
-  "repository": "https://github.com/typedin/music-scales",
-  "main": "lib/index.js",
-  "types": "types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typedin/music-scales"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/types.d.ts",
   "files": [
-    "README.md",
-    "lib/**/*"
+    "lib"
   ],
   "scripts": {
     "test": "test",
