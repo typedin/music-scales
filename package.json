@@ -1,22 +1,20 @@
 {
-  "name": "music-scales",
+  "name": "@typedin/music-scales",
   "author": "typedin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "ISC",
   "description": "A typescript package to help define music scales and build interval.",
   "repository": "https://github.com/typedin/music-scales",
-  "main": "./lib/index.js",
-  "types": "types/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "README.md",
-    "lib/**/*",
-    "*.d.ts",
-    "types/**/*"
+    "lib/**/*"
   ],
   "scripts": {
     "test": "test",
     "prepare": "husky install",
-    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "tsc": "tsc -p tsconfig.json",
     "prepublish": "npm run tsc"
   },
   "devDependencies": {
