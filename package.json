@@ -1,7 +1,7 @@
 {
   "name": "@typedin/music-scales",
   "author": "typedin",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "ISC",
   "description": "A typescript package to help define music scales and build interval.",
   "repository": {
@@ -17,7 +17,8 @@
     "test": "test",
     "prepare": "husky install",
     "tsc": "tsc -p tsconfig.json",
-    "prepublish": "npm run tsc"
+    "prepublish": "npm run copy-typescript-definitions && npm run tsc",
+    "copy-typescript-definitions": "copyfiles -u 1 \"src/**/*.d.ts\" lib"
   },
   "devDependencies": {
     "@babel/core": "^7.17.12",
@@ -25,6 +26,7 @@
     "@babel/preset-typescript": "^7.17.12",
     "@types/jest": "^27.5.1",
     "babel-jest": "^28.1.0",
+    "copyfiles": "^2.4.1",
     "husky": "^8.0.1",
     "jest": "^28.1.0",
     "lint-staged": "^12.4.1",

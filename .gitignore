@@ -24,7 +24,6 @@ coverage
 
 # Dependency directory
 node_modules
-/lib/
 bower_components
 
 # Editors
@@ -36,7 +35,8 @@ bower_components
 Thumbs.db
 
 # Ignore built ts files
-dist/**/*
+lib/**/*
+!/lib/types.d.ts
 
 # ignore yarn.lock
 yarn.lock
