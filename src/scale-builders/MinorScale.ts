@@ -1,4 +1,4 @@
-import { DegreeBuilder, Note } from "../types";
+import { DegreeBuilder, Note } from "../../types";
 import PerfectFifth from "../interval-builders/PerfectFifth";
 import PerfectForth from "../interval-builders/PerfectForth";
 import MajorSecond from "../interval-builders/MajorSecond";

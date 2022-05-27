@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
     "outDir": "./lib",
     "removeComments": true,
@@ -20,6 +21,6 @@
     "allowSyntheticDefaultImports": false,
     "rootDir": "./src/"
   },
-  "include": ["./src/**/*"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

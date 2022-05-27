@@ -1,4 +1,4 @@
-import { DegreeBuilder, Note, ScaleDegree } from "./types";
+import { DegreeBuilder, Note, ScaleDegree } from "../types";
 
 export function ScaleBuilder(
   tonic: Note,

@@ -1,4 +1,4 @@
-import { Note, AlterationEnum, DiatonicNoteEnum } from "../types";
+import { Note, AlterationEnum, DiatonicNoteEnum } from "../../types";
 
 export function getNoteFromInterval(
   note: Note,

@@ -9,8 +9,8 @@
     "type": "git",
     "url": "https://github.com/typedin/music-scales"
   },
-  "main": "./lib/index.js",
-  "types": "types/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib",
   "files": [
     "lib",
     "types/**/*",
@@ -20,8 +20,7 @@
     "test": "test",
     "prepare": "husky install",
     "tsc": "tsc -p tsconfig.json",
-    "prepublish": "npm run copy-typescript-definitions && npm run tsc",
-    "copy-typescript-definitions": "copyfiles -u 1 \"src/**/*.d.ts\" lib"
+    "prepublish": "npm run tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.17.12",
