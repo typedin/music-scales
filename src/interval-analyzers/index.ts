@@ -1,83 +1,48 @@
-import { IntervalBuilder, Note } from "../../types";
+import { Note } from "../../types";
 import { intervalBuilder } from "..";
 
-const lookup: { interval: string; callable: IntervalBuilder }[] = [
-  {
-    interval: "DiminishedSecond",
-    callable: (note: Note) =>
-      intervalBuilder.diminish(intervalBuilder.minorSecond(note)),
-  },
-  {
-    interval: "MinorSecond",
-    callable: intervalBuilder.minorSecond,
-  },
-  {
-    interval: "MajorSecond",
-    callable: intervalBuilder.majorSecond,
-  },
-  {
-    interval: "MinorThird",
-    callable: intervalBuilder.minorThird,
-  },
-  {
-    interval: "MajorThird",
-    callable: intervalBuilder.majorThird,
-  },
-  {
-    interval: "DiminishedForth",
-    callable: (note: Note) =>
-      intervalBuilder.diminish(intervalBuilder.perfectForth(note)),
-  },
-  {
-    interval: "PerfectForth",
-    callable: intervalBuilder.perfectForth,
-  },
-  {
-    interval: "AugmentedForth",
-    callable: (note: Note) =>
-      intervalBuilder.augment(intervalBuilder.perfectForth(note)),
-  },
-  {
-    interval: "DiminishedFifth",
-    callable: (note: Note) =>
-      intervalBuilder.diminish(intervalBuilder.perfectFifth(note)),
-  },
-  {
-    interval: "PerfectFifth",
-    callable: intervalBuilder.perfectFifth,
-  },
-  {
-    interval: "MinorSixth",
-    callable: intervalBuilder.minorSixth,
-  },
-  {
-    interval: "MajorSixth",
-    callable: intervalBuilder.majorSixth,
-  },
-  {
-    interval: "MinorSeventh",
-    callable: intervalBuilder.minorSeventh,
-  },
-  {
-    interval: "MajorSeventh",
-    callable: intervalBuilder.majorSeventh,
-  },
-];
+function isDiminished(interval: string): boolean {
+  const applesauce = interval.split(/(?<![A-Z])(?=[A-Z])/);
+  return ["Diminished"].includes(applesauce[0]);
+}
+function isAugmented(interval: string): boolean {
+  const applesauce = interval.split(/(?<![A-Z])(?=[A-Z])/);
+  return ["Augmented"].includes(applesauce[0]);
+}
+function shouldBePerfect(interval: string): boolean {
+  const applesauce = interval.split(/(?<![A-Z])(?=[A-Z])/);
+  return ["Forth", "Fifth", "Octave"].includes(applesauce[1]);
+}
 
 export default function (
   interval: string,
   firstNote: Note,
   secondNote: Note
 ): boolean {
-  const callable = lookup.find(
-    (aThing: { interval: string; callable: IntervalBuilder }) =>
-      aThing.interval == interval
-  )?.callable;
+  const applesauce = interval.split(/(?<![A-Z])(?=[A-Z])/);
 
-  if (!callable) {
-    return false;
+  if (isDiminished(interval)) {
+    const modifier = shouldBePerfect(interval) ? "perfect" : "minor";
+    return notesAreEquals(
+      intervalBuilder.diminish(
+        intervalBuilder[modifier + applesauce[1]](firstNote)
+      ),
+      secondNote
+    );
   }
-  return notesAreEquals(callable(firstNote), secondNote);
+
+  if (isAugmented(interval)) {
+    const modifier = shouldBePerfect(interval) ? "perfect" : "major";
+    return notesAreEquals(
+      intervalBuilder.augment(
+        intervalBuilder[modifier + applesauce[1]](firstNote)
+      ),
+      secondNote
+    );
+  }
+
+  const callable = interval[0].toLowerCase() + interval.substring(1);
+  return notesAreEquals(intervalBuilder[callable](firstNote), secondNote);
 }
 
 function notesAreEquals(firstNote: Note, secondNote: Note): boolean {
