@@ -28,8 +28,8 @@ const intervalBuilder = {
   perfectFifth: PerfectFifth,
   minorSixth: MinorSixth,
   majorSixth: MajorSixth,
-  minorSeven: MinorSeventh,
-  majorSeven: MajorSeventh,
+  minorSeventh: MinorSeventh,
+  majorSeventh: MajorSeventh,
   octave: OctaveBuilder,
 };
 

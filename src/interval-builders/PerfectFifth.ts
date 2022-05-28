@@ -13,6 +13,7 @@ const PerfectFifth: IntervalBuilder = function (note: Note): Note {
   return {
     name,
     alteration,
+    octave: note.octave,
   };
 };
 

@@ -13,6 +13,7 @@ const ForthBuilder: IntervalBuilder = (note: Note): Note => {
   return {
     name,
     alteration,
+    octave: note.octave,
   };
 };
 

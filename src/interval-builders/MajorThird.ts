@@ -13,6 +13,7 @@ const MajorThird: IntervalBuilder = (note: Note): Note => {
   return {
     name,
     alteration,
+    octave: note.octave,
   };
 };
 

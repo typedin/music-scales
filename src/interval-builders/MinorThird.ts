@@ -13,6 +13,7 @@ const MinorThird: IntervalBuilder = function (note: Note): Note {
   return {
     name,
     alteration,
+    octave: note.octave,
   };
 };
 export default MinorThird;
