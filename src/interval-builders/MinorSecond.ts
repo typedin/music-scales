@@ -19,6 +19,7 @@ function getAlteration(note: Note): AlterationEnum {
 const MinorSecond: IntervalBuilder = function (note: Note): Note {
   return {
     name: getName(note),
+    octave: note.octave,
     alteration: getAlteration(note),
   };
 };

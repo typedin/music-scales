@@ -1,7 +1,7 @@
 export interface Note {
   name: DiatonicNoteEnum;
   alteration: AlterationEnum;
-  octave?: number;
+  octave: number;
 }
 
 export type ScaleDegree = {
