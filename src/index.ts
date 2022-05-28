@@ -17,7 +17,7 @@ import {
   MinorMelodicScale,
 } from "./scale-builders/MinorScale";
 
-const intervalBuilder = {
+const intervalBuilder: { [functionName: string]: Function } = {
   augment: Augment,
   diminish: Diminish,
   minorSecond: MinorSecond,
@@ -33,7 +33,7 @@ const intervalBuilder = {
   octave: OctaveBuilder,
 };
 
-const scaleBuilder = {
+const scaleBuilder: { [functionName: string]: Function } = {
   majorScale: MajorScale,
   minorMelodicScale: MinorMelodicScale,
   minorHarmonicScale: MinorHarmonicScale,
