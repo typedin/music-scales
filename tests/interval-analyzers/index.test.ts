@@ -9,12 +9,33 @@ const C4: Note = {
 
 describe("Unison", () => {
   describe("is true", () => {
-    const unison: Note = {
-      name: DiatonicNoteEnum.C,
-      alteration: AlterationEnum.natural,
-      octave: 4,
-    };
-    expect(is("Unison", C4, unison)).toBe(true);
+    test("for C4", () => {
+      const unison: Note = {
+        name: DiatonicNoteEnum.C,
+        alteration: AlterationEnum.natural,
+        octave: 4,
+      };
+      expect(is("Unison", C4, unison)).toBe(true);
+    });
+
+    test("for Dbb4", () => {
+      const Dbb4: Note = {
+        name: DiatonicNoteEnum.D,
+        alteration: AlterationEnum.doubleFlat,
+        octave: 4,
+      };
+      expect(is("Unison", C4, Dbb4)).toBe(true);
+    });
+  });
+  describe("is false", () => {
+    test("for C3", () => {
+      const C3: Note = {
+        name: DiatonicNoteEnum.C,
+        alteration: AlterationEnum.natural,
+        octave: 3,
+      };
+      expect(is("Unison", C4, C3)).toBe(false);
+    });
   });
 });
 

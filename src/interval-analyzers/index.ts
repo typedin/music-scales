@@ -1,5 +1,6 @@
 import { Note } from "../../types";
 import { intervalBuilder } from "..";
+import MajorSecond from "../interval-builders/MajorSecond";
 
 function splitInterval(interval: string): Array<string> {
   return interval.split(/(?<![A-Z])(?=[A-Z])/);
@@ -60,6 +61,16 @@ export default function (
     newNote = intervalBuilder[getFirst(interval)](
       innerCallable(firstNote, getModifier(interval), interval)
     );
+  }
+
+  // check for enharmonies
+  if (interval === "Unison" && firstNote.name !== secondNote.name) {
+    newNote = MajorSecond(firstNote);
+    secondNote = {
+      name: secondNote.name,
+      octave: secondNote.octave,
+      alteration: MajorSecond(firstNote).alteration,
+    };
   }
 
   return notesAreTheSame(newNote, secondNote);
