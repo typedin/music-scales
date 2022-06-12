@@ -23,6 +23,7 @@ function getModifier(interval: string): "perfect" | "minor" | "major" {
   }
   return modifier;
 }
+
 function getFirst(interval: string) {
   if (isDiminished(interval)) {
     return "diminish";

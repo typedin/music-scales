@@ -1,5 +1,6 @@
 import Augment from "./interval-builders/Augment";
 import Diminish from "./interval-builders/Diminish";
+import Unison from "./interval-builders/Unison";
 import MajorSecond from "./interval-builders/MajorSecond";
 import MajorSeventh from "./interval-builders/MajorSeventh";
 import MajorSixth from "./interval-builders/MajorSixth";
@@ -20,6 +21,7 @@ import {
 const intervalBuilder: { [functionName: string]: Function } = {
   augment: Augment,
   diminish: Diminish,
+  unison: Unison,
   minorSecond: MinorSecond,
   majorSecond: MajorSecond,
   minorThird: MinorThird,

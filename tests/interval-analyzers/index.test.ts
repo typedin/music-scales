@@ -7,6 +7,17 @@ const C4: Note = {
   octave: 4,
 };
 
+describe("Unison", () => {
+  describe("is true", () => {
+    const unison: Note = {
+      name: DiatonicNoteEnum.C,
+      alteration: AlterationEnum.natural,
+      octave: 4,
+    };
+    expect(is("Unison", C4, unison)).toBe(true);
+  });
+});
+
 describe("MajorSecond", () => {
   describe("is true", () => {
     it("for D4", () => {
@@ -59,6 +70,7 @@ describe("DiminishedSecond", () => {
     });
   });
 });
+
 describe("MinorSecond", () => {
   describe("is true", () => {
     it("for Db4", () => {
@@ -149,6 +161,7 @@ describe("DiminishedFifth", () => {
     });
   });
 });
+
 describe("PerfectFifth", () => {
   describe("is true", () => {
     it("for G4", () => {
