@@ -1,4 +1,4 @@
-import is from "../../src/interval-analyzers/";
+import is from "../../src/interval-checkers/";
 import { AlterationEnum, DiatonicNoteEnum, Note } from "../../types";
 
 const C4: Note = {
