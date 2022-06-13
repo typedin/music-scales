@@ -17,17 +17,112 @@ describe("Unison", () => {
       };
       expect(is("Unison", C4, unison)).toBe(true);
     });
+    describe("enharmonies", () => {
+      test("for E4 and Fb4", () => {
+        const E4: Note = {
+          name: DiatonicNoteEnum.E,
+          alteration: AlterationEnum.natural,
+          octave: 4,
+        };
+        const Fflat4 = {
+          name: DiatonicNoteEnum.F,
+          alteration: AlterationEnum.flat,
+          octave: 4,
+        };
+        expect(is("Unison", Fflat4, E4)).toBe(true);
+        expect(is("Unison", E4, Fflat4)).toBe(true);
+      });
 
-    test("for Dbb4", () => {
-      const Dbb4: Note = {
-        name: DiatonicNoteEnum.D,
-        alteration: AlterationEnum.doubleFlat,
-        octave: 4,
-      };
-      expect(is("Unison", C4, Dbb4)).toBe(true);
+      test("for E#4 and F4", () => {
+        const Esharp4: Note = {
+          name: DiatonicNoteEnum.E,
+          alteration: AlterationEnum.sharp,
+          octave: 4,
+        };
+        const F4 = {
+          name: DiatonicNoteEnum.F,
+          alteration: AlterationEnum.natural,
+          octave: 4,
+        };
+        expect(is("Unison", F4, Esharp4)).toBe(true);
+        expect(is("Unison", Esharp4, F4)).toBe(true);
+      });
+
+      test("for E##4 and F#4", () => {
+        const EdoubleSharp4: Note = {
+          name: DiatonicNoteEnum.E,
+          alteration: AlterationEnum.doubleSharp,
+          octave: 4,
+        };
+        const Fsharp4 = {
+          name: DiatonicNoteEnum.F,
+          alteration: AlterationEnum.sharp,
+          octave: 4,
+        };
+        expect(is("Unison", Fsharp4, EdoubleSharp4)).toBe(true);
+        expect(is("Unison", EdoubleSharp4, Fsharp4)).toBe(true);
+      });
+
+      test("for B#3", () => {
+        const Bsharp3: Note = {
+          name: DiatonicNoteEnum.B,
+          alteration: AlterationEnum.sharp,
+          octave: 3,
+        };
+        expect(is("Unison", C4, Bsharp3)).toBe(true);
+        expect(is("Unison", Bsharp3, C4)).toBe(true);
+      });
+
+      test("for B##3 and C#4", () => {
+        const Bdoublesharp3: Note = {
+          name: DiatonicNoteEnum.B,
+          alteration: AlterationEnum.doubleSharp,
+          octave: 3,
+        };
+        const Csharp4 = {
+          name: DiatonicNoteEnum.C,
+          alteration: AlterationEnum.sharp,
+          octave: 4,
+        };
+        expect(is("Unison", Csharp4, Bdoublesharp3)).toBe(true);
+        expect(is("Unison", Bdoublesharp3, Csharp4)).toBe(true);
+      });
+
+      test("for Dbb4", () => {
+        const Dbb4: Note = {
+          name: DiatonicNoteEnum.D,
+          alteration: AlterationEnum.doubleFlat,
+          octave: 4,
+        };
+        expect(is("Unison", C4, Dbb4)).toBe(true);
+        expect(is("Unison", Dbb4, C4)).toBe(true);
+      });
+      test("for C##4", () => {
+        const CdoubleSharp4: Note = {
+          name: DiatonicNoteEnum.C,
+          alteration: AlterationEnum.doubleSharp,
+          octave: 4,
+        };
+        const D4 = {
+          name: DiatonicNoteEnum.D,
+          alteration: AlterationEnum.natural,
+          octave: 4,
+        };
+        expect(is("Unison", CdoubleSharp4, D4)).toBe(true);
+        expect(is("Unison", D4, CdoubleSharp4)).toBe(true);
+      });
     });
   });
+
   describe("is false", () => {
+    test("for D4", () => {
+      const D4: Note = {
+        name: DiatonicNoteEnum.D,
+        alteration: AlterationEnum.natural,
+        octave: 4,
+      };
+      expect(is("Unison", C4, D4)).toBe(false);
+    });
     test("for C3", () => {
       const C3: Note = {
         name: DiatonicNoteEnum.C,

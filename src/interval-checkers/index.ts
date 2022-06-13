@@ -1,6 +1,7 @@
-import { Note } from "../../types";
+import { Note, DiatonicNoteEnum, AlterationEnum } from "../../types";
 import { intervalBuilder } from "..";
 import MajorSecond from "../interval-builders/MajorSecond";
+import { getNextAlteration, getNoteFromInterval } from "../helpers";
 
 function splitInterval(interval: string): Array<string> {
   return interval.split(/(?<![A-Z])(?=[A-Z])/);
@@ -44,7 +45,7 @@ function innerCallable(
   return intervalBuilder[modifier + splitInterval(interval)[1]](firstNote);
 }
 
-export default function (
+export default function(
   interval: string,
   firstNote: Note,
   secondNote: Note
@@ -63,14 +64,11 @@ export default function (
     );
   }
 
-  // check for enharmonies
-  if (interval === "Unison" && firstNote.name !== secondNote.name) {
-    newNote = MajorSecond(firstNote);
-    secondNote = {
-      name: secondNote.name,
-      octave: secondNote.octave,
-      alteration: MajorSecond(firstNote).alteration,
-    };
+  if (interval === "Unison") {
+    if (notesAreTheSame(firstNote, secondNote)) {
+      return true;
+    }
+    return notesAreEnharmonics(firstNote, secondNote);
   }
 
   return notesAreTheSame(newNote, secondNote);
@@ -87,4 +85,42 @@ function notesAreTheSame(firstNote: Note, secondNote: Note): boolean {
     return false;
   }
   return true;
+}
+
+function notesAreEnharmonics(firstNote: Note, secondNote: Note): boolean {
+  if ([DiatonicNoteEnum.E, DiatonicNoteEnum.B].includes(firstNote.name)) {
+    return (
+      firstNote.alteration == AlterationEnum.sharp ||
+      firstNote.alteration == AlterationEnum.doubleSharp ||
+      secondNote.alteration == AlterationEnum.flat ||
+      secondNote.alteration == AlterationEnum.doubleFlat
+    );
+  }
+
+  if ([DiatonicNoteEnum.E, DiatonicNoteEnum.B].includes(secondNote.name)) {
+    return (
+      firstNote.alteration == AlterationEnum.flat ||
+      firstNote.alteration == AlterationEnum.doubleFlat ||
+      secondNote.alteration == AlterationEnum.sharp ||
+      secondNote.alteration == AlterationEnum.doubleSharp
+    );
+  }
+
+  if (
+    getNoteFromInterval(firstNote, 2) == secondNote.name &&
+    (secondNote.alteration == AlterationEnum.doubleFlat ||
+      firstNote.alteration == AlterationEnum.doubleSharp)
+  ) {
+    return true;
+  }
+
+  if (
+    getNoteFromInterval(secondNote, 2) == firstNote.name &&
+    (firstNote.alteration == AlterationEnum.doubleFlat ||
+      secondNote.alteration == AlterationEnum.doubleSharp)
+  ) {
+    return true;
+  }
+
+  return false;
 }
