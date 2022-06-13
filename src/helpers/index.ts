@@ -1,5 +1,16 @@
 import { Note, AlterationEnum, DiatonicNoteEnum } from "../../types";
 
+export function isNoteLower(firstNote: Note, secondNote: Note): boolean {
+  const indexOfFirstNote = (): number =>
+    Object.values(DiatonicNoteEnum).indexOf(firstNote.name) % 12;
+  const indexOfSecondNote = (): number =>
+    Object.values(DiatonicNoteEnum).indexOf(secondNote.name) % 12;
+
+  return (
+    indexOfFirstNote < indexOfSecondNote && firstNote.octave < secondNote.octave
+  );
+}
+
 export function getNoteFromInterval(
   note: Note,
   interval: number

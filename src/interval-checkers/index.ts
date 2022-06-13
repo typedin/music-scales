@@ -1,7 +1,6 @@
 import { Note, DiatonicNoteEnum, AlterationEnum } from "../../types";
 import { intervalBuilder } from "..";
-import MajorSecond from "../interval-builders/MajorSecond";
-import { getNextAlteration, getNoteFromInterval } from "../helpers";
+import { getNoteFromInterval } from "../helpers";
 
 function splitInterval(interval: string): Array<string> {
   return interval.split(/(?<![A-Z])(?=[A-Z])/);
@@ -45,7 +44,7 @@ function innerCallable(
   return intervalBuilder[modifier + splitInterval(interval)[1]](firstNote);
 }
 
-export default function(
+export default function (
   interval: string,
   firstNote: Note,
   secondNote: Note
