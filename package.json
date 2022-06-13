@@ -16,6 +16,7 @@
     "types/**/*",
     "*.d.ts"
   ],
+  "exports" : {},
   "scripts": {
     "test": "test",
     "prepare": "husky install",
