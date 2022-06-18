@@ -10,11 +10,13 @@
     "url": "https://github.com/typedin/music-scales"
   },
   "main": "dist/typedin-music-scales.cjs.js",
+  "module": "dist/typedin-music-scales.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "test",
     "prepare": "husky install",
     "tsc": "tsc -p tsconfig.json",
+    "build": "npx preconstruct build",
     "prepublish": "npm run tsc"
   },
   "devDependencies": {

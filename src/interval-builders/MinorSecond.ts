@@ -1,3 +1,4 @@
+import { AlterationEnum } from "src/constants";
 import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
 function getName(note: Note): any {
