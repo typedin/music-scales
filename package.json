@@ -17,7 +17,7 @@
     "prepare": "husky install",
     "tsc": "tsc -p tsconfig.json",
     "build": "npx preconstruct build",
-    "prepublish": "npm run tsc"
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.17.12",
