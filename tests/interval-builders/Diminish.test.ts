@@ -4,7 +4,7 @@ import PerfectForth from "../../src/interval-builders/PerfectForth";
 import MinorSecond from "../../src/interval-builders/MinorSecond";
 import MinorThird from "../../src/interval-builders/MinorThird";
 import Octave from "../../src/interval-builders/Octave";
-import { AlterationEnum, DiatonicNoteEnum } from "../../types";
+import { DiatonicNoteEnum, AlterationEnum } from "../../src/constants";
 
 describe("Diminished", () => {
   it("can diminish a minor second", () => {
@@ -13,11 +13,13 @@ describe("Diminished", () => {
         MinorSecond({
           name: DiatonicNoteEnum.C,
           alteration: AlterationEnum.natural,
+          octave: 4,
         })
       )
     ).toEqual({
       name: DiatonicNoteEnum.D,
       alteration: AlterationEnum.doubleFlat,
+      octave: 4,
     });
   });
   it("can diminish a minor third", () => {
@@ -26,11 +28,13 @@ describe("Diminished", () => {
         MinorThird({
           name: DiatonicNoteEnum.C,
           alteration: AlterationEnum.natural,
+          octave: 4,
         })
       )
     ).toEqual({
       name: DiatonicNoteEnum.E,
       alteration: AlterationEnum.doubleFlat,
+      octave: 4,
     });
   });
   it("can diminish a forth", () => {
@@ -39,11 +43,13 @@ describe("Diminished", () => {
         PerfectForth({
           name: DiatonicNoteEnum.C,
           alteration: AlterationEnum.natural,
+          octave: 4,
         })
       )
     ).toEqual({
       name: DiatonicNoteEnum.F,
       alteration: AlterationEnum.flat,
+      octave: 4,
     });
   });
 
@@ -53,11 +59,13 @@ describe("Diminished", () => {
         PerfectFifth({
           name: DiatonicNoteEnum.C,
           alteration: AlterationEnum.natural,
+          octave: 4,
         })
       )
     ).toEqual({
       name: DiatonicNoteEnum.G,
       alteration: AlterationEnum.flat,
+      octave: 4,
     });
   });
 

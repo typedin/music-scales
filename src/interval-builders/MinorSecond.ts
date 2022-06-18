@@ -1,4 +1,3 @@
-import { Note, AlterationEnum, IntervalBuilder } from "../../types";
 import { getNoteFromInterval, getPreviousAlteration } from "../helpers";
 
 function getName(note: Note): any {

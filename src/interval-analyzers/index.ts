@@ -1,4 +1,3 @@
-import { Note } from "../../types";
 import is from "../interval-checkers/index";
 
 type Interval = {

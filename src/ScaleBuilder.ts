@@ -1,5 +1,3 @@
-import { DegreeBuilder, Note, ScaleDegree } from "../types";
-
 export function ScaleBuilder(
   tonic: Note,
   degreeBuilders: Array<DegreeBuilder>
@@ -13,6 +11,7 @@ export function ScaleBuilder(
           ? tonic.alteration
           : degreeBuilder.callable(tonic).alteration,
       function: degreeBuilder.function,
+      octave: tonic.octave,
     })
   );
 }

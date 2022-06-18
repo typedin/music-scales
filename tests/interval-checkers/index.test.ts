@@ -1,5 +1,5 @@
 import is from "../../src/interval-checkers/";
-import { AlterationEnum, DiatonicNoteEnum, Note } from "../../types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../src/constants";
 
 const C4: Note = {
   name: DiatonicNoteEnum.C,

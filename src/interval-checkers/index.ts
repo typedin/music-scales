@@ -1,4 +1,4 @@
-import { Note, DiatonicNoteEnum, AlterationEnum } from "../../types";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants";
 import { intervalBuilder } from "..";
 import { getNoteFromInterval } from "../helpers";
 

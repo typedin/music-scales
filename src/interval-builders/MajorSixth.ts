@@ -1,4 +1,3 @@
-import { IntervalBuilder, Note } from "../../types";
 import PerfectFifth from "./PerfectFifth";
 import MajorSecond from "./MajorSecond";
 

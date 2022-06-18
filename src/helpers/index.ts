@@ -1,4 +1,4 @@
-import { Note, AlterationEnum, DiatonicNoteEnum } from "../../types";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants";
 
 export function isNoteLower(firstNote: Note, secondNote: Note): boolean {
   const indexOfFirstNote = (): number =>

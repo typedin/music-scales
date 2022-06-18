@@ -1,5 +1,5 @@
+import { AlterationEnum, DiatonicNoteEnum } from "../../src/constants";
 import Unison from "../../src/interval-builders/Unison";
-import { AlterationEnum, DiatonicNoteEnum } from "../../types";
 
 describe("Unison", () => {
   it("builds an octave", () => {
