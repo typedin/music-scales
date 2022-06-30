@@ -1,3 +1,4 @@
+import is from "./interval-checkers/index";
 import Augment from "./interval-builders/Augment";
 import Diminish from "./interval-builders/Diminish";
 import Unison from "./interval-builders/Unison";
@@ -41,4 +42,4 @@ const scaleBuilder: { [functionName: string]: Function } = {
   minorHarmonicScale: MinorHarmonicScale,
 };
 
-export { intervalBuilder, scaleBuilder };
+export { intervalBuilder, scaleBuilder, is };
