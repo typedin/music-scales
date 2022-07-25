@@ -1,9 +1,12 @@
 type applesauce = {
   direction: string;
-  interval: string;
-  frequency: number;
+  name: string;
 };
 
-export default function (reference: applesauce, temperament: any): number {
-  return temperament(reference)[reference.interval][reference.direction];
+export default function (
+  frequency: number,
+  interval: applesauce,
+  temperament: any
+): number {
+  return temperament(frequency)[interval.name][interval.direction];
 }

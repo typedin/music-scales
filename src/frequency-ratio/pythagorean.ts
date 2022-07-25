@@ -2,11 +2,6 @@
  * logic has been taken from here:
  * https://www.teoria.com/en/articles/temperaments/02-pythagoras.php
  */
-type applesauce = {
-  direction: "up" | "down";
-  interval: string;
-  frequency: number;
-};
 
 function perfectFifthUp(frequency: number): number {
   return (frequency * 3) / 2;
@@ -16,39 +11,47 @@ function perfectForthDown(frequency: number): number {
   return (frequency * 3) / 4;
 }
 
-export default function (input: applesauce): object {
+export default function (reference: number): {
+  M2: { up: number };
+  M3: { up: number };
+  P4: { up: number };
+  P5: { up: number };
+  m6: { up: number };
+  M7: { up: number };
+  P8: { up: number };
+} {
   const M2 = {
-    up: perfectForthDown(perfectFifthUp(input.frequency)),
+    up: perfectForthDown(perfectFifthUp(reference)),
   };
 
   const M3 = {
     up: perfectForthDown(
-      perfectFifthUp(perfectForthDown(perfectFifthUp(input.frequency)))
+      perfectFifthUp(perfectForthDown(perfectFifthUp(reference)))
     ),
   };
 
   const P4 = {
-    up: (input.frequency * 4) / 3,
+    up: (reference * 4) / 3,
   };
 
   const P5 = {
-    up: perfectFifthUp(input.frequency),
+    up: perfectFifthUp(reference),
   };
 
   const m6 = {
-    up: perfectFifthUp(perfectForthDown(perfectFifthUp(input.frequency))),
+    up: perfectFifthUp(perfectForthDown(perfectFifthUp(reference))),
   };
 
   const M7 = {
     up: perfectFifthUp(
       perfectForthDown(
-        perfectFifthUp(perfectForthDown(perfectFifthUp(input.frequency)))
+        perfectFifthUp(perfectForthDown(perfectFifthUp(reference)))
       )
     ),
   };
 
   const P8 = {
-    up: input.frequency * 2,
+    up: reference * 2,
   };
 
   return {

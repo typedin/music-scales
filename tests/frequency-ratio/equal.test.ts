@@ -1,9 +1,9 @@
-import pythagorean from "../../src/frequency-ratio/pythagorean";
+import equal from "../../src/frequency-ratio/equal";
 import frenquecyRatio from "../../src/frequency-ratio/";
 
-const REFERENCE = 261;
+const REFERENCE = 261.626;
 
-describe("pythagorean", () => {
+describe("equal", () => {
   describe("major second", () => {
     it("can be calculated up", () => {
       const result = frenquecyRatio(
@@ -12,9 +12,9 @@ describe("pythagorean", () => {
           direction: "up",
           name: "M2",
         },
-        pythagorean
+        equal
       );
-      expect(result).toBeCloseTo(294, 0); // expect a D
+      expect(result).toBeCloseTo(293.6647, 0); // expect a D
     });
   });
   describe("major third", () => {
@@ -25,25 +25,11 @@ describe("pythagorean", () => {
           direction: "up",
           name: "M3",
         },
-        pythagorean
+        equal
       );
-      expect(result).toBeCloseTo(330, 0); // expect a E
+      expect(result).toBeCloseTo(329.6275, 0); // expect a D
     });
   });
-  describe("perfect forth", () => {
-    it("can be calculated up", () => {
-      const result = frenquecyRatio(
-        REFERENCE,
-        {
-          direction: "up",
-          name: "P4",
-        },
-        pythagorean
-      );
-      expect(result).toBeCloseTo(348); // expect a F
-    });
-  });
-
   describe("perfect fifth", () => {
     it("can be calculated up", () => {
       const result = frenquecyRatio(
@@ -52,9 +38,9 @@ describe("pythagorean", () => {
           direction: "up",
           name: "P5",
         },
-        pythagorean
+        equal
       );
-      expect(result).toEqual(391.5); // expect a G
+      expect(result).toBeCloseTo(391.9954, 0); // expect a D
     });
   });
 
@@ -66,9 +52,9 @@ describe("pythagorean", () => {
           direction: "up",
           name: "m6",
         },
-        pythagorean
+        equal
       );
-      expect(result).toBeCloseTo(440, 0); // expect a A
+      expect(result).toBeCloseTo(440, 0); // expect a D
     });
   });
   describe("major seventh", () => {
@@ -79,12 +65,12 @@ describe("pythagorean", () => {
           direction: "up",
           name: "M7",
         },
-        pythagorean
+        equal
       );
-      expect(result).toBeCloseTo(495, 0); // expect a B
+      expect(result).toBeCloseTo(493.8833, 0); // expect a D
     });
   });
-  describe("octave", () => {
+  describe("perfect octave", () => {
     it("can be calculated up", () => {
       const result = frenquecyRatio(
         REFERENCE,
@@ -92,9 +78,9 @@ describe("pythagorean", () => {
           direction: "up",
           name: "P8",
         },
-        pythagorean
+        equal
       );
-      expect(result).toEqual(522);
+      expect(result).toBeCloseTo(523.2511, 0); // expect a D
     });
   });
 });
