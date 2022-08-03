@@ -4,7 +4,7 @@ type interval = {
 };
 
 export default function (
-  frequency: number,
+  frequency: any,
   interval: interval,
   temperament: any
 ): number {
